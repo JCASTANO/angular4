@@ -11,6 +11,7 @@ import { ContarClicksDirective } from './directives/contar-clicks.directive';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { AlertModule } from 'ngx-bootstrap/alert';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
+    AlertModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCiGsoFevMN2J-dXWtD_31AN4UkraR4Hq0'
     })
