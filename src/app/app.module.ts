@@ -8,6 +8,10 @@ import { AppComponent } from './app.component';
 import { AgmCoreModule } from '@agm/core';
 import { ContarClicksDirective } from './directives/contar-clicks.directive';
 
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ModalModule } from 'ngx-bootstrap/modal';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +22,9 @@ import { ContarClicksDirective } from './directives/contar-clicks.directive';
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    BsDropdownModule.forRoot(),
+    TooltipModule.forRoot(),
+    ModalModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCiGsoFevMN2J-dXWtD_31AN4UkraR4Hq0'
     })
