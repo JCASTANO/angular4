@@ -8,9 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'PlatziSquare';
   lugares: any = [
-    {active: true, nombre: 'Florería La Gardenia'},
-    {active: false, nombre: 'Donas la pasadita'},
-    {active: true, nombre: 'Veterinaria Huellitas Felices'}
+    {plan: 'pagado', cercania: 1, distancia: 1, active: true, nombre: 'Florería La Gardenia'},
+    {plan: 'gratis', cercania: 2, distancia: 2, active: false, nombre: 'Donas la pasadita'},
+    {plan: 'pagado', cercania: 2, distancia: 2, active: true, nombre: 'Veterinaria Huellitas Felices'},
+    {plan: 'gratis', cercania: 3, distancia: 3, active: false, nombre: 'Mi negocio'}
   ];
 
   lat: number = 51.678418;

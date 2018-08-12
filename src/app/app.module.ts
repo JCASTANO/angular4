@@ -1,3 +1,4 @@
+import { ResaltarDirective } from './directives/resaltar.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -8,7 +9,8 @@ import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ResaltarDirective
   ],
   imports: [
     BrowserModule,
