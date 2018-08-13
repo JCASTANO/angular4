@@ -10,10 +10,11 @@ export class LugaresComponent {
 
   title = 'PlatziSquare';
   lugares: any = [
-    {id: 1, plan: 'pagado', cercania:  1, distancia:  1, active: true, nombre: 'Florería La Gardenia'},
-    {id: 2, plan: 'gratis', cercania: 2, distancia: 2, active: false, nombre: 'Donas la pasadita'},
-    {id: 3, plan: 'pagado', cercania: 2, distancia: 2, active: true, nombre: 'Veterinaria Huellitas Felices'},
-    {id: 4, plan: 'gratis', cercania: 3, distancia: 3, active: false, nombre: 'Mi negocio'}
+    {id: 1, plan: 'pagado', cercania:  1, distancia:  1, active: true, nombre: 'Florería La Gardenia', description: 'una descripcion'},
+    {id: 2, plan: 'gratis', cercania: 2, distancia: 2, active: false, nombre: 'Donas la pasadita', description: 'una descripcion'},
+    {id: 3, plan: 'pagado', cercania: 2, distancia: 2, active: true, nombre: 'Veterinaria Huellitas Felices',
+    description: 'una descripcion'},
+    {id: 4, plan: 'gratis', cercania: 3, distancia: 3, active: false, nombre: 'Mi negocio', description: 'una descripcion'}
   ];
 
   lat: number = 51.678418;

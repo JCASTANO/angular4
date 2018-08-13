@@ -15,24 +15,32 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { DetalleComponent } from './detalle/detalle.component';
 import { LugaresComponent } from './lugares/lugares.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
   declarations: [
+    // componentes
     AppComponent,
     DetalleComponent,
+    LugaresComponent,
+    ContactoComponent,
+    // directivas
     ResaltarDirective,
-    ContarClicksDirective,
-    LugaresComponent
+    ContarClicksDirective
   ],
   imports: [
+    // modulos core
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    // modulos de ruteo
     AppRoutingModule,
+    // boostrap
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
     AlertModule.forRoot(),
+    // google maps
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCiGsoFevMN2J-dXWtD_31AN4UkraR4Hq0'
     })
