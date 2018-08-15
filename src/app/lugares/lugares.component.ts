@@ -18,7 +18,9 @@ export class LugaresComponent {
   public modalRef: BsModalRef;
   constructor(private modalService: BsModalService,
               private lugaresService: LugaresService) {
-    this.lugares = lugaresService.getLugares();
+    lugaresService.getLugares().subscribe(lugares => {
+        this.lugares = lugares;
+    });
   }
 
   public openModal(template: TemplateRef<any>) {

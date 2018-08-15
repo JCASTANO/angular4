@@ -17,6 +17,13 @@ import { AlertModule } from 'ngx-bootstrap/alert';
 import { DetalleComponent } from './detalle/detalle.component';
 import { LugaresComponent } from './lugares/lugares.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireStorageModule } from 'angularfire2/storage';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { CrearComponent } from './crear/crear.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +34,8 @@ import { ContactoComponent } from './contacto/contacto.component';
     ContactoComponent,
     // directivas
     ResaltarDirective,
-    ContarClicksDirective
+    ContarClicksDirective,
+    CrearComponent
   ],
   imports: [
     // modulos core
@@ -44,7 +52,13 @@ import { ContactoComponent } from './contacto/contacto.component';
     // google maps
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCiGsoFevMN2J-dXWtD_31AN4UkraR4Hq0'
-    })
+    }),
+    // firebase
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AngularFireStorageModule
   ],
   providers: [LugaresService],
   bootstrap: [AppComponent]

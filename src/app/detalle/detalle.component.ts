@@ -13,8 +13,6 @@ export class DetalleComponent {
   lugar: any = {};
 
   constructor(private route: ActivatedRoute, private lugaresService: LugaresService) {
-    console.log(this.route.snapshot.params['id']);
-    console.log(this.route.snapshot.queryParams['action']);
     this.id = this.route.snapshot.params['id'];
     this.lugar = this.lugaresService.buscarLugar(this.id);
   }
