@@ -1,3 +1,4 @@
+import { LugaresService } from './services/lugares.service';
 import { AppRoutingModule } from './routes/app.routing.module';
 import { ResaltarDirective } from './directives/resaltar.directive';
 import { BrowserModule } from '@angular/platform-browser';
@@ -45,7 +46,7 @@ import { ContactoComponent } from './contacto/contacto.component';
       apiKey: 'AIzaSyCiGsoFevMN2J-dXWtD_31AN4UkraR4Hq0'
     })
   ],
-  providers: [],
+  providers: [LugaresService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

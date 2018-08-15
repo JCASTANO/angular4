@@ -16,6 +16,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ng g d directives/mydirective
 ng g component detalle -m app
+ng g service services/myservices
 
 ## Build
 

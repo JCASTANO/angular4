@@ -1,6 +1,5 @@
-import { ContactoComponent } from './../contacto/contacto.component';
-import { DetalleComponent } from './../detalle/detalle.component';
-import { AppComponent } from '../app.component';
+import { ContactoComponent } from '../contacto/contacto.component';
+import { DetalleComponent } from '../detalle/detalle.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LugaresComponent } from '../lugares/lugares.component';
