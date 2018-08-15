@@ -10,16 +10,17 @@ import { Component, OnInit, TemplateRef } from '@angular/core';
 export class LugaresComponent {
 
   title = 'PlatziSquare';
-
-  lat: number = 51.678418;
-  lng: number = 7.809007;
+  lat: number;
+  lng: number;
   lugares = null;
 
   public modalRef: BsModalRef;
   constructor(private modalService: BsModalService,
               private lugaresService: LugaresService) {
-    lugaresService.getLugares().subscribe(lugares => {
+    lugaresService.getLugares().subscribe((lugares: any) => {
         this.lugares = lugares;
+        this.lat = lugares [0].lat;
+        this.lng = lugares [0].lng;
     });
   }
 

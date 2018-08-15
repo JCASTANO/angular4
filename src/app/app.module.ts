@@ -14,7 +14,6 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AlertModule } from 'ngx-bootstrap/alert';
-import { DetalleComponent } from './detalle/detalle.component';
 import { LugaresComponent } from './lugares/lugares.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { AngularFireModule } from 'angularfire2';
@@ -29,13 +28,12 @@ import { CrearComponent } from './crear/crear.component';
   declarations: [
     // componentes
     AppComponent,
-    DetalleComponent,
     LugaresComponent,
     ContactoComponent,
+    CrearComponent,
     // directivas
     ResaltarDirective,
-    ContarClicksDirective,
-    CrearComponent
+    ContarClicksDirective
   ],
   imports: [
     // modulos core
