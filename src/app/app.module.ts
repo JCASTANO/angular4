@@ -23,6 +23,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { CrearComponent } from './crear/crear.component';
+import { LinkifystrPipe } from './pipes/linkifystr.pipe';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { CrearComponent } from './crear/crear.component';
     CrearComponent,
     // directivas
     ResaltarDirective,
-    ContarClicksDirective
+    ContarClicksDirective,
+    LinkifystrPipe
   ],
   imports: [
     // modulos core

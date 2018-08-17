@@ -9,7 +9,18 @@
             <a class="btn btn-primary" routerLink="/crear/new">Crear nuevo negocio</a>
             <ul class="list-group">
                 <ng-container *ngFor="let lugar of lugares; let i = index">
-                <a routerLink="/crear/{{lugar.id}}"><li class="list-group-item" >{{i}} {{lugar.nombre}}</li></a>
+                        <!-- <li class="list-group-item" >
+                            {{i}} {{lugar.nombre | lowercase}}
+                        </li>
+                        <li class="list-group-item" >
+                            {{i}} {{lugar.nombre | uppercase}}
+                        </li> -->
+                        <li class="list-group-item" >
+                            <a routerLink="/crear/{{lugar.id}}"><h3>{{i}} {{lugar.nombre | titlecase}}</h3></a>
+                             <br />
+                             <small>Creado: {{lugar.id | date:'medium' | uppercase}}</small>
+                             <p [innerHtml]="lugar.descripcion | linkifystr"></p>
+                        </li>
                 </ng-container>
               </ul>
         </div>
