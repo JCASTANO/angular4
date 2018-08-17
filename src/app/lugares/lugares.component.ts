@@ -17,10 +17,14 @@ export class LugaresComponent {
   public modalRef: BsModalRef;
   constructor(private modalService: BsModalService,
               private lugaresService: LugaresService) {
-    lugaresService.getLugares().subscribe((lugares: any) => {
-        this.lugares = lugares;
-        this.lat = lugares [0].lat;
-        this.lng = lugares [0].lng;
+    lugaresService.getLugares()
+    .subscribe((lugares: any) => {
+        this.lugares = Object.values(lugares);
+        this.lat = this.lugares [0].lat;
+        this.lng = this.lugares [0].lng;
+    }, error => {
+      console.log(error);
+      alert('Dificultades. Error: ' + error.statusText);
     });
   }
 
