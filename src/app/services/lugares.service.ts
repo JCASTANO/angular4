@@ -13,7 +13,7 @@ export class LugaresService {
   public getLugares() {
     return this.afDB.list('lugares').valueChanges();
     // return this.http.get(this.API_ENDPOINT + '/lugares.json');
-    // return this.http.get(this.API_ENDPOINT + '/.json').pipe(map((resultado: any) => resultado.json().lugares));
+    // return this.http.get(this.API_ENDPOINT + '/.json?auth=jwt').pipe(map((resultado: any) => resultado.json().lugares));
   }
 
   public getLugar(id) {

@@ -1,0 +1,23 @@
+import { AutorizacionService } from './../services/autorizacion.service';
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent {
+
+  loginParams: any = {};
+
+  constructor(private autorizacionService: AutorizacionService) {}
+
+  login() {
+    this.autorizacionService.login(this.loginParams.email, this.loginParams.password);
+  }
+
+  facebookLogin() {
+    this.autorizacionService.facebookLogin();
+  }
+
+}

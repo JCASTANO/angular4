@@ -2,6 +2,7 @@ import { LugaresService } from './../services/lugares.service';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { trigger, state, style, transition, animate } from '../../../node_modules/@angular/animations';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-lugares',
@@ -40,7 +41,7 @@ export class LugaresComponent {
         this.state = 'final';
     }, error => {
       console.log(error);
-      alert('Dificultades. Error: ' + error.statusText);
+      swal('Dificultades. Error: ' + error.statusText, '', 'error');
     });
   }
 

@@ -1,3 +1,5 @@
+import { MyGuardService } from './services/my-guard.service';
+import { AutorizacionService } from './services/autorizacion.service';
 import { LugaresService } from './services/lugares.service';
 import { AppRoutingModule } from './routes/app.routing.module';
 import { ResaltarDirective } from './directives/resaltar.directive';
@@ -25,6 +27,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { CrearComponent } from './crear/crear.component';
 import { LinkifystrPipe } from './pipes/linkifystr.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
+import { RegistroComponent } from './registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +37,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LugaresComponent,
     ContactoComponent,
     CrearComponent,
+    LoginComponent,
+    RegistroComponent,
     // directivas
     ResaltarDirective,
     ContarClicksDirective,
@@ -62,7 +68,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AngularFireAuthModule,
     AngularFireStorageModule
   ],
-  providers: [LugaresService],
+  providers: [LugaresService, AutorizacionService, MyGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
