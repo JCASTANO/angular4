@@ -1,7 +1,11 @@
+import { map, switchMap, debounceTime } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';
 import { LugaresService } from './../services/lugares.service';
 import { Component, OnInit } from '@angular/core';
 import swal from 'sweetalert2';
+import { FormControl } from '../../../node_modules/@angular/forms';
+import { Observable } from '../../../node_modules/rxjs';
+import { HttpClient } from '../../../node_modules/@angular/common/http';
 
 @Component({
   selector: 'app-crear',
@@ -13,7 +17,12 @@ export class CrearComponent {
   lugar: any = {};
   id: any = null;
 
-  constructor(private lugaresService: LugaresService, private route: ActivatedRoute) {
+  results$: Observable<any>;
+  private searchField: FormControl;
+
+  constructor(private lugaresService: LugaresService,
+              private route: ActivatedRoute,
+              private httpClient: HttpClient) {
 
     this.id = this.route.snapshot.params['id'];
 
@@ -24,6 +33,22 @@ export class CrearComponent {
     } else {
       this.reiniciarVariables();
     }
+
+    const URL = 'http://maps.google.com/maps/api/geocode/json';
+    this.searchField = new FormControl();
+    this.results$ = this.searchField.valueChanges
+      .pipe(
+       debounceTime(500),
+       switchMap(query => this.httpClient.get(`${URL}?address=${query}`)),
+       map((response: any) => response),
+       map((response: any) => response.results));
+
+  }
+
+  seleccionarDireccion(result) {
+    this.lugar.calle = result.address_components[1].long_name + ' ' + result.address_components[0].long_name;
+    this.lugar.ciudad = result.address_components[4].long_name;
+    this.lugar.pais = result.address_components[5].long_name;
   }
 
   private reiniciarVariables() {
