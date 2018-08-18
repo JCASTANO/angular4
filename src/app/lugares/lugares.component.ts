@@ -1,15 +1,30 @@
 import { LugaresService } from './../services/lugares.service';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { Component, OnInit, TemplateRef } from '@angular/core';
+import { trigger, state, style, transition, animate } from '../../../node_modules/@angular/animations';
 
 @Component({
   selector: 'app-lugares',
   templateUrl: './lugares.component.html',
-  styleUrls: ['./lugares.component.css']
+  styleUrls: ['./lugares.component.css'],
+  animations: [
+    trigger('contenedorAnimable', [
+      state('inicial', style({
+        opacity: 0
+      })),
+      state('final', style({
+        opacity: 1
+      })),
+      transition('inicial => final', animate(2000)),
+      transition('final => inicial', animate(1000))
+    ])
+  ]
 })
 export class LugaresComponent {
 
   title = 'PlatziSquare';
+  state = 'inicial';
+
   lat: number;
   lng: number;
   lugares = null;
@@ -22,10 +37,25 @@ export class LugaresComponent {
         this.lugares = Object.values(lugares);
         this.lat = this.lugares [0].lat;
         this.lng = this.lugares [0].lng;
+        this.state = 'final';
     }, error => {
       console.log(error);
       alert('Dificultades. Error: ' + error.statusText);
     });
+  }
+
+  animar() {
+    this.state = (this.state === 'final') ? 'inicial' : 'final';
+  }
+
+  animacionInicial(e) {
+    console.log('Iniciado');
+    console.log(e);
+  }
+
+  animacionTermina(e) {
+    console.log('Terminado');
+    console.log(e);
   }
 
   public openModal(template: TemplateRef<any>) {

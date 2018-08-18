@@ -17,3 +17,14 @@ h1 {
     background-color: white;
     color: black;
   }
+
+  #cuadrado {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+  }
+
+  .padding {
+    padding: 10px;
+    margin-bottom: 10px;
+  }

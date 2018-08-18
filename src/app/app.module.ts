@@ -24,6 +24,7 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { CrearComponent } from './crear/crear.component';
 import { LinkifystrPipe } from './pipes/linkifystr.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { LinkifystrPipe } from './pipes/linkifystr.pipe';
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    BrowserAnimationsModule,
     // modulos de ruteo
     AppRoutingModule,
     // boostrap
