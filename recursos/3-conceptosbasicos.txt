@@ -1,0 +1,98 @@
+modulos y componentes
+
+	modulos -> 
+		compras, 
+			cada vista 1 componente
+		soporte, 
+			cada vista 1 componente
+		recursos humanos
+			cada vista 1 componente
+		
+	componentes ->
+		
+obligatoriamente deben tener 1 modulo
+
+	modulos de angular ->se pueden o no incluir
+	
+		http
+		browser
+		forms
+		reactiveforms
+		
+	modulos de terceros -> 
+		google maps
+		firebase
+		
+	los modulos se pueden reutilizar
+
+@NgModule
+	se compone de componentes
+	imports -> browserModule, HttpModule,FormsModule
+	providers -> servicios
+	bootstrap -> con cual componente se va iniciar
+	
+Componente
+	cada una de las vistas debe ser un componente
+	cada vista puede tener sus componentes
+		pero no es recomendado
+	
+	archivo ts
+		selector
+		templateurl
+		stylesUrls
+	archivo .html
+	
+--data binding
+	comunicacion de codigo ts a html
+	
+	String.interpolation {{}} ts -> html
+	property binding [] modelo cambia a una prop 
+						de la vista
+	event binding html () -> ts
+	two way data binding [()] ts <-> html
+	
+	String.interpolation
+		se puede sumar por ejemplo
+
+--property binding
+	modelo cambia a una prop de la vista
+	[disabled] = "false"
+--event binding
+	(click)
+	(keyup.ENTER) 
+	(keyup)
+--two way data binding
+	comunicacion en 2 vías
+	[(ngModel)]="nombre"
+	se responde ante eventos del cliente
+	
+------ directivas
+
+	forma de manipular informacion
+	
+	componentes -> directivas con un template
+	estructurales -> directivas que cambian el dom
+	atributos -> por medio de atributos pueden modificar
+				el elemento
+				
+	<ul>
+		<li *ngFor="let lugar of lugares; index as i">{{i}} {{lugar.nombre}}</li>
+	</ul>
+	
+	directiva ngIf
+	
+	no se puede tener mas de una directiva estructurales
+	asignada
+	para esto se debe usar
+	
+	<ng-container *ngFor="let lugar of lugares; index as i">
+      <li *ngIf="lugar.active" >{{i}} {{lugar.nombre}}</li>
+    </ng-container>
+	
+	<ng-container> -> se comporta similar al <div> 
+	pero a diferencia de este último 
+	no agrega elementos al DOM
+	
+---- instalando librerias de terceros
+
+	angular google maps

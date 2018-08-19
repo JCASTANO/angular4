@@ -1,0 +1,47 @@
+ngStyle ngClass
+
+<ng-container *ngFor="let lugar of lugares; let i = index; let esPar = odd; let esImpar = even">
+      <li 
+      [ngStyle]="{color: (lugar.active) ? 'black' : 'gray'}"
+      [ngClass]="{numero_par: (esPar),numero_impar: (esImpar) }"
+      >{{i}} {{lugar.nombre}}</li>
+</ng-container>
+
+-- ngSwitch
+
+<ng-container *ngFor="let lugar of lugares; let i = index; let esPar = odd; let esImpar = even" [ngSwitch]= "lugar.cercania">
+      <li 
+      [ngStyle]="{color: (lugar.active) ? 'black' : 'gray'}"
+      [ngClass]="{numero_par: (esPar),numero_impar: (esImpar) }"
+      >{{i}} {{lugar.nombre}} -
+      <span *ngSwitchCase="1" [ngStyle]="{color: 'green'}">Muy cercano</span>
+      <span *ngSwitchCase="2" [ngStyle]="{color: 'black'}">Cercano</span>
+      <span *ngSwitchCase="3" [ngStyle]="{color: 'red'}">Lejano</span>
+    </li>
+</ng-container>
+
+--- directiva de atributo
+
+crear directiva para resaltar negocios
+
+---- host listener
+
+Cuando quieres recibir estadísticas de usuarios, 
+por ejemplo, en que sección de tu pagina 
+hacen clicks con mas frecuencia
+
+crear directiva para clicks
+
+a[appContarClicks] -> solo aplica para tag a
+<a appContarClicks>
+	--contenido html
+</a>
+
+cada a tiene su propio hostlistener
+
+editar el modelo por medio del dom
+
+---- host binder
+
+similar, editar el elemento del dom desde la directiva
+@HostBinding('style.opacity')

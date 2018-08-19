@@ -1,0 +1,11 @@
+servicios
+	centralizar funcionalidad
+	usados desde cualquier componente
+	hacen nuestra app mucho mas mantenible
+	crerlo matricularlo en el module
+
+-- firebase
+
+console.firebase.google.com
+https://github.com/angular/angularfire2
+https://github.com/angular/angularfire2/blob/master/docs/install-and-setup.md

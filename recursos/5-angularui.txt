@@ -1,0 +1,17 @@
+angular material y bootstrap
+
+angular no provee estilos por defecto
+se pueden agregar estilos de forma sencilla
+
+https://material.io/
+https://getbootstrap.com/
+https://getbootstrap.com/docs/4.1/getting-started/introduction/
+
+https://www.primefaces.org/primeng/#/
+
+--- configurando bootstrap
+
+https://loiane.com/2017/08/how-to-add-bootstrap-to-an-angular-cli-project/
+https://valor-software.com/ngx-bootstrap/#/dropdowns
+https://pingendo.com/
+https://www.c-sharpcorner.com/article/how-to-install-jquery-popper-and-bootstrap-in-angular/

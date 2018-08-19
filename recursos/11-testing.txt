@@ -1,0 +1,6 @@
+El testing es una forma automatizada a través de la programación 
+de encontrar errores antes de que nuestras aplicaciones lleguen a producción. Hacer testing nos ayuda a
+
+Antes de comenzar debes saber que hay dos tipos de Tests, los isolados conocidos como unit tests, y los no isolados.
+
+https://angular.io/guide/testing

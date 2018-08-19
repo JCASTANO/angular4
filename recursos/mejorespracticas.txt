@@ -1,0 +1,17 @@
+https://blog.usejournal.com/best-practices-for-writing-angular-6-apps-e6d3c0f6c7c1
+https://medium.com/@tomastrajan/6-best-practices-pro-tips-for-angular-cli-better-developer-experience-7b328bc9db81
+http://blog.enriqueoriol.com/2017/11/httpclient-vs-http-angular.html
+https://code-maze.com/angular-best-practices/
+https://angular.io/guide/styleguide
+https://malcoded.com/posts/angular-top-2017
+
+extensiones vs code
+http://devboosts.com/2017/02/08/top-10-vs-code-extensions/
+
+xss
+https://dormoshe.io/articles/how-angular-protects-us-from-xss-attacks-19
+
+
+antipatrones
+
+https://blog.rangle.io/10-ways-to-misuse-angular/

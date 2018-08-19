@@ -1,0 +1,36 @@
+router
+	navegacion en nuestra aplicacion
+	podemos asignar componentes a cada ruta
+	pueder recibir parametros
+	crear modulo de ruteo e importarlo
+	
+href vs routerLink
+
+el uno hace redirect
+el otro usar el router de angular
+
+--resaltando el link activo con css
+
+routerLinkActive="active"
+
+--parametros en rutas
+
+https://github.com/serhiisol/ngx-auth
+
+this.route.snapshot.params['id']
+
+query params
+
+this.route.snapshot.queryParams['action']
+
+pasar informacion
+	pathparam
+	queryparam
+	input
+	service
+	
+https://angularfirebase.com/lessons/sharing-data-between-angular-components-four-methods/
+
+-------- pagina de detalle
+
+https://developer.mozilla.org/es/docs/Web/Accessibility/ARIA

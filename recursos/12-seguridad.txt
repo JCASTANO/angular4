@@ -1,0 +1,16 @@
+jwt
+
+estandar abierto que permite la transferencia segura entre 2 partes
+no tienen dependencias externas
+mecanismo compacto
+firmados con llave secreta o par de publica/privada
+
+Los **Guard **son un tema muy extenso, 
+hay varios tipos de Guard [canActivate, canActivateChildren, canDeactivate, Resolve, canLoad]:
+
+guardia, decidir si se muestra o no
+
+https://developers.facebook.com/
+
+para admitir el logging con la misma cuenta y distintos proveedores
+https://github.com/EddyVerbruggen/nativescript-plugin-firebase/issues/389

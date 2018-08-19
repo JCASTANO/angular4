@@ -1,0 +1,31 @@
+herramientas
+	chrome
+	editor de texto
+		
+		auto import
+		tslint
+		
+	node js (npm)
+	angular cli
+		set de herramientas de consola
+		crear proyectos
+			componentes
+			rutas
+			servicios
+			pipes
+			etc
+		testing
+		production
+
+----
+instalar node
+npm list -g --depth=0
+https://cli.angular.io/
+
+npm install -g @angular/cli
+ng new platzisquare
+cd platzisquare
+ng serve --open
+
+https://github.com/kekeh/mydatepicker
+

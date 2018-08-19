@@ -1,0 +1,21 @@
+framework para spa
+	nunca te va redirecciona una nueva pagina
+	por medio del router
+
+angular1 -> angularjs
+angular2 -> revision completa del framework
+angular4 -> update mayor de angular2
+
+Otras fechas de lanzamiento:
+Angular 6 - Marzo de 2018
+Angular 7 - Septiembre/Octubre de 2018
+
+typescript
+	superset de js
+	agregados de js
+		tipos
+		clases
+		interfaces
+	traspilar -> codigo hacia js
+
+platzisquare

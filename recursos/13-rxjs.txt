@@ -1,0 +1,26 @@
+https://www.metaltoad.com/blog/angular-6-upgrading-api-calls-rxjs-6
+https://alligator.io/angular/reactive-forms-valuechanges/
+
+Los observables son objetos a los que un observador debe subcribirse para que sea notificado cuando se presenten cambios. 
+La programación reactiva trabaja bajo streams, los cuales son flujos de datos como variables, 
+entradas de un usuario, consultas de base de datos, etc. 
+Los streams se pueden representar mediante los Observables y manipularlos 
+con operadores como si fueras colecciones de datos.
+
+Los Streams son objetos que almacenan flujos de datos, datos que cambian en el tiempo. 
+La idea con los Observables es reaccionar automáticamente a los cambios del Stream.
+
+Cada Stream provee una función subscribe con la que podemos reaccionar a sus datos.
+[La notación para los Streams es con un $ al final]
+
+---
+TypeAhead
+
+ const URL = 'http://maps.google.com/maps/api/geocode/json';
+    this.searchField = new FormControl();
+    this.results$ = this.searchField.valueChanges
+      .pipe(
+       debounceTime(500),
+       switchMap(query => this.httpClient.get(`${URL}?address=${query}`)),
+       map((response: any) => response),
+       map((response: any) => response.results));

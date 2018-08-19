@@ -1,0 +1,11 @@
+http vs sockets
+cliente servidor
+pwa https://developers.google.com/web/progressive-web-apps/
+
+firebase trabaja por defecto por sockets pero se puede usar con http
+
+El operador map nos permite darle formato a la respuesta que nos llega cuando usamos el operador get.
+
+https://sweetalert2.github.io/
+
+http://blog.enriqueoriol.com/2017/11/httpclient-vs-http-angular.html
