@@ -18,7 +18,7 @@ export class CrearComponent {
   id: any = null;
 
   results$: Observable<any>;
-  private searchField: FormControl;
+  searchField: FormControl;
 
   constructor(private lugaresService: LugaresService,
               private route: ActivatedRoute,
