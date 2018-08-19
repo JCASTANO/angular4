@@ -34,7 +34,7 @@ export class CrearComponent {
       this.reiniciarVariables();
     }
 
-    const URL = 'http://maps.google.com/maps/api/geocode/json';
+    const URL = 'https://maps.google.com/maps/api/geocode/json';
     this.searchField = new FormControl();
     this.results$ = this.searchField.valueChanges
       .pipe(

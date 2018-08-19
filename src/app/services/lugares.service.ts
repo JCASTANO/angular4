@@ -31,6 +31,6 @@ export class LugaresService {
   }
 
   public obtenerGeoData(direccion) {
-    return this.http.get('http://maps.google.com/maps/api/geocode/json?address=' + direccion);
+    return this.http.get('https://maps.google.com/maps/api/geocode/json?address=' + direccion);
   }
 }
