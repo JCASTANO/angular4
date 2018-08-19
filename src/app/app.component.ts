@@ -1,6 +1,5 @@
 import { AutorizacionService } from './services/autorizacion.service';
 import { Component } from '@angular/core';
-import { Spinkit } from 'ng-http-loader';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +7,6 @@ import { Spinkit } from 'ng-http-loader';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public spinkit = Spinkit;
   public loggedIn = false;
   public email = null;
 
