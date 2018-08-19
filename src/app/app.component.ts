@@ -1,5 +1,6 @@
 import { AutorizacionService } from './services/autorizacion.service';
 import { Component } from '@angular/core';
+import { Spinkit } from 'ng-http-loader';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  loggedIn = false;
-  email = null;
+  public spinkit = Spinkit;
+  public loggedIn = false;
+  public email = null;
 
   constructor(private autorizacionService: AutorizacionService) {
     this.autorizacionService.isLogged().subscribe(result => {

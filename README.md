@@ -1,6 +1,7 @@
 ctrl + shift + x --> ver instalados
 ctrl + ñ -> abrir terminal
 ctrl + f2 -> para resaltar
+shift + alt + f -> para formatear
 alt + o -> para ir desde una variable hasta el componente
 
 # Platzisquare
