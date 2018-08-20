@@ -1,5 +1,6 @@
 https://www.mydatascope.com/features
 https://moreapp.com/es/
+
 https://www.123formbuilder.com
 https://es.prontoforms.com/
 https://www.linkaform.com/
@@ -12,3 +13,54 @@ https://nwforms.gruponw.com/
 
 https://www.bixpe.com/blog/formularios-moviles-inteligentes-vs-formularios-moviles-simples/
 https://www.bixpe.com/blog/como-utilizar-formularios-moviles/
+
+-----------------------
+
+		roles
+			tecnicos
+				diligenciar formularios
+					tomar fotos
+					cambios estados de formularios
+						pendiente
+						iniciado
+						en espera
+						reabierto
+						finalizado
+							validar campos obligatorio
+					no reabrilos
+					veer notificacion de asignaciones y bandeja de trabajo pendiente
+					al finalizar deben decir a que empresa se lo hicieron
+					conclusiones
+			supervisor
+				registrar usuarios / firme por primra vez
+				ver detalle de formularios de por empleado
+				ver tiempo de ejecucion por formularios y empleados
+				ver geolocalizacion de los estados
+				reabrir formularios
+				asignar formularios a empleados
+				asignar rutas de trabajo por empleado (obligatorio)
+					con prioridad
+					asignar la empresa (opcional)
+				reportes
+					archivo plano
+						corte mensual
+						inactivar usuarios
+				registrar usuarios finales o clientes finales
+				desactivar campos que no van en la plantilla
+			cliente
+				cliente de formularios moviles
+				cliente del cliente
+			
+			formularios moviles
+				vamos a pedir informacion y logo
+				pie de pagina
+				registrar el administrador
+				inactivar planes
+			
+			notas -> 
+				consecutivo por empresa
+				las empresas se deben poder agrupar tantos para nuestros clientes como proveedores
+				
+			
+			para prestadores de servicio
+			
